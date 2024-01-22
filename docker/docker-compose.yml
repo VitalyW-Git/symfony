@@ -9,6 +9,10 @@ services:
       args:
         - PUID=${PUID}
         - PGID=${PGID}
+        - INSTALL_XDEBUG=${INSTALL_XDEBUG} # аргумент .env для подключения xdebug
+#    environment:
+#      PHP_IDE_CONFIG: "serverName=Docker"
+#    user: "www-data"
     volumes:
       - ./../:/var/www/
 #    ports:
